@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "GitaVerse",
+  "version": "0.0.1",
+  "description": "Get motivated with Gita Verses whenever you open a new tab",
+  "action": {
+    "default_title": "GitaVerse",
+    "default_popup": "index.html"
+  }
+}
