@@ -1,10 +1,8 @@
 import Head from "next/head"
-import Image from "next/image"
-import styles from "../styles/Home.module.css"
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <title>GitaVerse</title>
         <meta
@@ -13,6 +11,13 @@ export default function Home() {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <main className="w-96 h-96 border">
+        <div>
+          <h1 className="scroll-m-20 text-3xl font-extrabold tracking-tight lg:text-4xl text-center py-2">
+            GitaVerse
+          </h1>
+        </div>
+      </main>
     </div>
   )
 }
