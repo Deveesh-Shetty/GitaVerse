@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.custom-background {
+  background: url("/mahabharata.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 1rem;
+  position: relative;
+}
+
+.custom-background::after {
+  content: "";
+  position: absolute;
+  z-index: -5;
+  inset: 0;
+  opacity: 0.6;
+  border-radius: inherit;
+  background: #000;
+}
+
