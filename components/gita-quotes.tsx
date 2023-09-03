@@ -1,10 +1,38 @@
-import { GitaAPI } from "../lib/types"
+import { useQuery } from "@tanstack/react-query"
+import { chapter_verse } from "../lib/gita"
+import { getRandomNumber } from "../lib/utils"
 
-interface Quotes {
-  quotes: GitaAPI
-}
+export default function GitaQuotes() {
+  const random_number = getRandomNumber(18)
+  const chapter = chapter_verse[random_number]
 
-export default function GitaQuotes({ quotes }: Quotes) {
+  const {
+    data: quotes,
+    isLoading,
+    error,
+  } = useQuery({
+    queryKey: ["gita-quote"],
+    refetchOnWindowFocus: false,
+    retry: 5,
+    queryFn: async () => {
+      return fetch(
+        `https://bhagavad-gita3.p.rapidapi.com/v2/chapters/${chapter.chapter}/verses/${chapter.verse}/`,
+        {
+          headers: {
+            "X-RapidAPI-Key": process.env.NEXT_PUBLIC_GITA_API_KEY,
+            "X-RapidAPI-Host": "bhagavad-gita3.p.rapidapi.com",
+          },
+        }
+      ).then((res) => res.json())
+    },
+  })
+
+  console.log(quotes)
+
+  if (isLoading) {
+    return <div>Loading...</div>
+  }
+
   return (
     <div>
       <p>
