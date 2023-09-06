@@ -1,6 +1,6 @@
 # GitaVerse
 
-A browser extension, which gives a verse from Bhagwad Gita. (Future) Website for Bhagwad Gita
+A browser extension, which gives a verse from Bhagavad Gita. (Future) Website for Bhagavad Gita
 
 ## Tech Stack
 - Next.js
@@ -42,7 +42,7 @@ npm run build:extension
 **If you faced any problem, or error while following the steps, feel free to contact me and raise an issue. I am more than ready to help!**
 
 ## Plans
-- Have a website that displays the entire Bhagwad Gita in an ancient scripture like a webpage, which should feel like reading the epic itself. It would be great if someone designed it or gave some more ideas.
+- Have a website that displays the entire Bhagavad Gita in an ancient scripture like a webpage, which should feel like reading the epic itself. It would be great if someone designed it or gave some more ideas.
 - My current Idea: War theme, Golden, Blue, and Royal colors, and a script-roll opening animation when the viewer clicks the verse. Book opening animation when the viewer opens the chapter. 
 -[x] Browser Extension will be just one part of the website (I have to figure out how to separate both the website and extension)
 
